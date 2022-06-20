@@ -31,6 +31,7 @@ function App() {
         from: accounts[0],
       });
       setMessage('Winner has been picked!');
+      lotteryManager();
     } catch (error) {
       setMessage(error.message);
     }
@@ -51,6 +52,7 @@ function App() {
         value: web3.utils.toWei(value, 'ether'),
       });
       setMessage('You have been entered!');
+
       lotteryManager();
     } catch (error) {
       setMessage('Error: ' + error.message);
